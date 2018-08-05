@@ -5,9 +5,86 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/style.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+
+<!-- copiar desde aqui -----------------------------------------------------------------------------------  -->
+		<link rel="stylesheet" href="assets/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css"/>
+
+		<!-- modal -->
+  		<script src="assets/js/jquery_modal.min.js"></script>
+		<script src="assets/js/jquery.modal.js" type="text/javascript" charset="utf-8"></script>
+  		<link rel="stylesheet" href="assets/css/jquery.modal.css" type="text/css" media="screen" />
 		
+		<!-- funciones modal -->
+		<script language="javascript"> 
+			var i;
+		function contadormas(iddeinput){ 
+		    var cant = document.getElementById(iddeinput); 
+		    if(cant.value>=2){
+		        i = cant.value;
+		    }else{
+		        if(cant.value == "1"){
+		        	i = 1;
+		        }
+		    }
+		    i++; 
+		    cant.value = i;
+		}
+
+		function contadormenos(iddeinput){
+		    var cant = document.getElementById(iddeinput); 
+		    if(cant.value>2){
+		        i = cant.value;
+		        i--;
+		        cant.value = i;
+		    }else{
+		        cant.value="1";
+		    }
+		}
+
+		// cambiar imagen del modal -----------------
+		function clickaction( b ){
+			// Accion por defecto para Buttons;
+			switch( b.id ){
+			   case "anillo":
+			   		$titulo = "Anillo Personalizado";
+		        	$imagen = "images/anillo.jpg"; 
+		        	$descripcion = "Anillo de plata, con mensaje personalizado, especial para el dia de la madre";
+		            break;
+			   case "pulsera":
+			   		$titulo = "Pulsera Personalizada";
+		        	$imagen = "images/pulsera.jpg";  
+		        	$descripcion = "Pulsera para enamorados, demuestra que tan grande es tu amor";    
+		            break;
+			   case "collar":
+			   		$titulo = "Collar Personalizado";
+		        	$imagen = "images/collar.jpg";  
+		        	$descripcion = "Collar artesanal, personalizado. un recuerdo muy elegante";  
+		            break;
+		        case "camisas":
+		        	$titulo = "Camisa Personalizada";
+		        	$imagen = "images/camisas.jpg"; 
+		        	$descripcion = "Estampados personalizados, marca tu estilo, deja huella.";   
+		            break;
+		        case "tulas":
+		        	$titulo = "Tula Personalizada";
+		        	$imagen = "images/tulas.jpg";  
+		        	$descripcion = "Que tu estilo te acompañe en todas tus aventuras";
+		            break;
+		    }
+
+		    document.getElementById("tituloModal").innerHTML = $titulo;
+		    document.getElementById("descripcionModal").innerHTML = $descripcion;
+		    document.getElementById('imagenModal').src = $imagen; 
+		    document.getElementById("cantidad1").value = '1';
+		}
+
+		</script>	
+
+<!-- copiar hasta aqui ------------------------------------------------------------------------------------------------- -->
+
 	</head>
 	<body class="is-preload">
 
@@ -17,8 +94,14 @@
 					<nav>
 						<ul>
 							<li><a href="#intro">Inicio</a></li>
+
+							<!-- copiar desde aqui --------------------------------------------------- -->
+
 							<li><a href="#quienesSomos">Quienes Somos</a></li>
 							<li><a href="#nuestrosProductos">Nuestros Productos</a></li>
+							
+							<!-- copiar hasta aqui ---------------------------------------------------- -->
+
 							<li><a href="#three">Equipo de Trabajo</a></li>
 							<li><a href="#four">Contactanos</a></li>
 						</ul>
@@ -40,6 +123,9 @@
 							</ul>
 						</div>
 					</section>
+
+
+<!-- copiar desde aqui ---------------------------------------------------------------------------------- -->
 
 				<!-- quienes somos -->
 					<section id="quienesSomos" class="wrapper style3 fade-up">
@@ -79,13 +165,13 @@
 				<!-- nuestros productos -->
 					<section id="nuestrosProductos" class="wrapper style2 spotlights">
 						<section>
-							<a href="#" class="image"><img src="images/anillo.jpg" alt="" data-position="center center" /></a>
+							<a href="#" class="image"><img src="images/anillo.jpg" id="anillo" alt="" data-position="center center" /></a>
 							<div class="content">
 								<div class="inner">
 									<h2>Anillos</h2>
 									<p>La empresa personalizara anillos en acero los cuales llevaran grabado lo que el cliente desee como: (fechas, nombres, iniciales y frases) tendrán un precio cómodo para los clientes.</p>
 									<ul class="actions">
-										<a href="#venderProductos" class="boton" rel="modal:open"><span class="text-boton">Comprar</span></a>
+										<a href="#vender" onclick="clickaction(this)" id="anillo" class="boton" rel="modal:open"><span class="text-boton">Comprar</span></a>
 									</ul>
 								</div>
 							</div>
@@ -96,7 +182,7 @@
 								<div class="inner">
 									<h2>Pulseras</h2>
 									<p>La empresa se encargara de elaborar y personalizar pulseras con materiales artesanales o hechos con hilos, fibras textiles, metales, silicona y de gomas.</p>
-									<a href="#" class="boton"><span class="text-boton">Comprar</span></a>
+									<a href="#vender" onclick="clickaction(this)" id="pulsera" class="boton" rel=modal:open><span class="text-boton">Comprar</span></a>
 								</div>
 							</div>
 						</section>
@@ -106,7 +192,7 @@
 								<div class="inner">
 									<h2>Collares</h2>
 									<p>Se ofrecerá collares tipo artesanal hechos con hilos, argollas, broches, piedras, perlas y detalles metálicos. Cada uno de estos será personalizado y elaborado con  los materiales y diseños los cuales serán escogidos por nuestro cliente.</p>
-									<a href="#" class="boton"><span class="text-boton">Comprar</span></a>
+									<a href="#vender" onclick="clickaction(this)" id="collar" class="boton" rel=modal:open><span class="text-boton">Comprar</span></a>
 								</div>
 							</div>
 						</section>
@@ -116,11 +202,45 @@
 								<div class="inner">
 									<h2>Camisas y Gorras</h2>
 									<p>Camisas y gorras estampadas de todo tipo, el precio variará según la complejidad del estampado que se requiera y el tipo de tela escogido por el cliente, también llevaran detalles como lentejuelas, piedrillas, tela de terciopelo, plumas, esto dará un aspecto de alto relieve pero cada uno de estos detalles serán escogidos por los clientes teniendo en cuenta sus gustos y exigencias.</p>
-									<a href="#" class="boton"><span class="text-boton">Comprar</span></a>
+									<a href="#vender" onclick="clickaction(this)" id="camisas" class="boton" rel=modal:open><span class="text-boton">Comprar</span></a>
 								</div>
 							</div>
 						</section>
+						<section>
+							<a href="#" class="image"><img src="images/tulas.jpg" alt="" data-position="25% 25%" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Tulas</h2>
+									<p>Las tulas serán personalizadas con muchos detalles escogidos por los clientes, están serán estampadas con diferentes figuras, animales o cosas también se le añadirán materiales como perlas, lentejuelas, brillantinas, telas de diferente tipos, cada uno de estos elementos se pondrán en la tula si el cliente así lo desea.</p>
+									<a href="#vender" onclick="clickaction(this)" id="tulas" class="boton" rel=modal:open><span class="text-boton">Comprar</span></a>
+								</div>
+							</div>
+						</section>
+
+						<!--  -- --- ------------------------- modal vender --------------------------------------------------- -->
+						<div id="vender" class="modal">
+							<h4 class="titulo">Comprar</h4>
+							<div style="float: left; width: 160px">
+								<span id="tituloModal" style="color: Black;"></span>
+								<br>
+								<p id="descripcionModal" style="width: 100%; color: black; font-size: 12px; text-align: justify-all;"></p>
+								<span style="width: 100%; color: black; font-size: 14px; font-weight: bold;">Cantidad</span>
+								<table style="width: 100%;">
+									<tr>
+										<button class="boton btn-form" type="button" id="menos" onclick="javascript: contadormenos('cantidad1')"><i class="fa fa-minus"></i></button>
+										<input id="cantidad1" type="text" class="cajita" value="1">
+										<button class="boton btn-form" type="button" id="mas" onclick="javascript: contadormas('cantidad1')"><i class="fa fa-plus"></i></button>
+									</tr>
+								</table>
+							</div>
+							<img id="imagenModal" src="images/anillo.jpg" style="width: 250px; height: auto; float: right;">
+							<p></p>
+						</div>
 					</section>
+
+
+
+<!-- copiar hasta aqui ---------------------------------------------------------------------------------------------------- -->
 
 				<!-- cuatro -->
 					<section id="four" class="wrapper style1 fade-up">
@@ -192,6 +312,23 @@
 				</div>
 			</footer>
 
+
+<!-- copiar desde aqui ----------------------------------------------------------------------- -->
+
+		<script type="text/javascript">
+			$(function() {
+				$('a[href="#vender"]').click(function(event) {
+			      event.preventDefault();
+			      $(this).modal({
+			        fadeDuration: 250
+			      });
+			    });
+		    });
+		</script>
+
+<!-- copiar hasta aqui ---------------------------------------------------------------------------- -->
+
+
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
@@ -200,6 +337,8 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			
 
 	</body>
 </html>
