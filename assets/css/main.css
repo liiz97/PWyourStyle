@@ -1,5 +1,6 @@
 @import url(font-awesome.min.css);
 
+
 /*
 	Hyperspace by HTML5 UP
 	html5up.net | @ajlkn
@@ -188,6 +189,7 @@ input, select, textarea {
 
 	h1 {
 		font-size: 2.75em;
+		
 	}
 
 		h1.major {
@@ -261,6 +263,13 @@ input, select, textarea {
 		}
 
 	}
+	.til{
+		font-family: 'Passion One', cursive;
+		text-align: center;
+		font-size: 45px;
+		color: white;
+	}
+			
 
 	sub {
 		font-size: 0.8em;
@@ -2223,7 +2232,13 @@ input, select, textarea {
 /* Form */
 
 	form {
-		margin: 0 0 2em 0;
+		margin: auto;
+		background: rgb(0,0,0,0.6);
+		width: 450px;
+		padding: 10px 20px;
+		box-sizing: border-box;
+		margin-top: 20px;
+		border-radius: 8px;
 	}
 
 		form > :last-child {
@@ -2654,6 +2669,7 @@ input, select, textarea {
 		list-style: none;
 		margin-left: -1em;
 		padding-left: 0;
+		text-align: center;
 	}
 
 		ul.actions li {
@@ -3053,11 +3069,22 @@ input, select, textarea {
 			}
 
 		.spotlights > section:nth-child(2) {
-			background-color: rgba(0, 0, 0, 0.05);
+			background-color: #E5E7E9;
 		}
 
 		.spotlights > section:nth-child(3) {
-			background-color: rgba(0, 0, 0, 0.1);
+			background-color: #D0D3D4;
+		}
+
+	    .spotlights > section:nth-child(1) {
+			background-color:  #D0D3D4;
+		}
+
+		.spotlights > section:nth-child(4) {
+			background-color: #E5E7E9 ;
+		}
+	    .spotlights > section:nth-child(5) {
+			background-color:  #D0D3D4;
 		}
 
 		.spotlights > section.inactive > .image:before, body.is-preload .spotlights > section > .image:before {
@@ -3226,11 +3253,13 @@ input, select, textarea {
 		}
 
 		.wrapper.style1 {
-			background-color: #5e42a6;
+			background-image: url(images/pic13.jpg);
+			background-size: 100vw 100vh;
+			background-attachment: fixed;
 		}
 
 		.wrapper.style1-alt {
-			background-color: #493382;
+			background-color: #5052b5;
 		}
 
 		.wrapper.style2 {

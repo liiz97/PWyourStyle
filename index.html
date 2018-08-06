@@ -5,19 +5,108 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link href="https://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	    <link rel="stylesheet" href="assets/css/bootstrap/css/bootstrap.min.css">
+	    <!-- copiar desde aqui -----------------------------------------------------------------------------------  -->
+		<link rel="stylesheet" href="assets/css/style.css" />
+		<link rel="stylesheet" href="assets/css/style-contact.css" />
+		<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css"/>
+		<!-- modal -->
+  		<script src="assets/js/jquery_modal.min.js"></script>
+		<script src="assets/js/jquery.modal.js" type="text/javascript" charset="utf-8"></script>
+  		<link rel="stylesheet" href="assets/css/jquery.modal.css" type="text/css" media="screen" />
+		
+		<!-- funciones modal -->
+		<script language="javascript"> 
+			var i;
+		function contadormas(iddeinput){ 
+		    var cant = document.getElementById(iddeinput); 
+		    if(cant.value>=2){
+		        i = cant.value;
+		    }else{
+		        if(cant.value == "1"){
+		        	i = 1;
+		        }
+		    }
+		    i++; 
+		    cant.value = i;
+		}
+
+		function contadormenos(iddeinput){
+		    var cant = document.getElementById(iddeinput); 
+		    if(cant.value>2){
+		        i = cant.value;
+		        i--;
+		        cant.value = i;
+		    }else{
+		        cant.value="1";
+		    }
+		}
+
+		// cambiar imagen del modal -----------------
+		function clickaction( b ){
+			// Accion por defecto para Buttons;
+			switch( b.id ){
+			   case "anillo":
+			   		$titulo = "Anillo Personalizado";
+		        	$imagen = "images/anillo.jpg"; 
+		        	$descripcion = "Anillo de plata, con mensaje personalizado, especial para el dia de la madre";
+		            break;
+			   case "pulsera":
+			   		$titulo = "Pulsera Personalizada";
+		        	$imagen = "images/pulsera.jpg";  
+		        	$descripcion = "Pulsera para enamorados, demuestra que tan grande es tu amor";    
+		            break;
+			   case "collar":
+			   		$titulo = "Collar Personalizado";
+		        	$imagen = "images/collar.jpg";  
+		        	$descripcion = "Collar artesanal, personalizado. un recuerdo muy elegante";  
+		            break;
+		        case "camisas":
+		        	$titulo = "Camisa Personalizada";
+		        	$imagen = "images/camisas.jpg"; 
+		        	$descripcion = "Estampados personalizados, marca tu estilo, deja huella.";   
+		            break;
+		        case "tulas":
+		        	$titulo = "Tula Personalizada";
+		        	$imagen = "images/tulas.jpg";  
+		        	$descripcion = "Que tu estilo te acompañe en todas tus aventuras";
+		            break;
+		    }
+
+		    document.getElementById("tituloModal").innerHTML = $titulo;
+		    document.getElementById("descripcionModal").innerHTML = $descripcion;
+		    document.getElementById('imagenModal').src = $imagen; 
+		    document.getElementById("cantidad1").value = '1';
+		}
+
+		</script>	
+
+<!-- copiar hasta aqui ------------------------------------------------------------------------------------------------- -->
+
+
+
 	</head>
 	<body class="is-preload">
 
 		<!-- Sidebar -->
 			<section id="sidebar">
 				<div class="inner">
+					<!-- copiar desde aqui --------------------------------------------------- -->
+
+					<img src="images/logo.jpg" style="width:200px; height:200px; border-radius:150px;">
+
+					<!-- copiar hasta aqui ---------------------------------------------------- -->
 					<nav>
 						<ul>
 							<li><a href="#intro">Inicio</a></li>
-							<li><a href="#one">Quienes Somos</a></li>
-							<li><a href="#two">Nuestros Productos</a></li>
-							<li><a href="#three">Equipo de Trabajo</a></li>
+							<!-- copiar desde aqui --------------------------------------------------- -->
+
+							<li><a href="#quienesSomos">Quienes Somos</a></li>
+							<li><a href="#nuestrosProductos">Nuestros Productos</a></li>
+
+							<!-- copiar hasta aqui ---------------------------------------------------- -->
 							<li><a href="#four">Contactanos</a></li>
 						</ul>
 					</nav>
@@ -29,208 +118,200 @@
 
 				<!-- Intro -->
 					<section id="intro" class="wrapper style1 fullscreen fade-up">
-						<div class="inner">
-							<h1>Your Style ltda</h1>
-							<p>Just another fine responsive site template designed by <a href="http://html5up.net">HTML5 UP</a><br />
-							and released for free under the <a href="http://html5up.net/license">Creative Commons</a>.</p>
-							<ul class="actions">
-								<li><a href="#one" class="button scrolly">Learn more</a></li>
-							</ul>
-						</div>
-					</section>
-
-				<!-- One -->
-					<section id="one" class="wrapper style2 spotlights">
-						<section>
-							<a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Sed ipsum dolor</h2>
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="images/pic02.jpg" alt="" data-position="top center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Feugiat consequat</h2>
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Ultricies aliquam</h2>
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
+				    	<section class="cid-qTkA127IK8 mbr-fullscreen" id="header2-1">
+						    <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(35, 35, 35);"></div>
+						    <div class="container align-center">
+						        <div class="row justify-content-md-center">
+						            <div class="mbr-white col-md-10">
+						                <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1">
+						                    PERSONALIZAMOS A TU ESTILO</h1>
+						                <h3 class="mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style display-2">Animate a crear tu propio diseño&nbsp;</h3>
+						                <p class="mbr-text pb-3 mbr-fonts-style display-5"><em>Nuestro objetivo es innovar cada accesorio y prenda teniendo en cuenta tus gustos<br></em><br><br></p>
+						                
+						            </div>
+						        </div>
+						    </div>
+						    <div class="mbr-arrow hidden-sm-down" aria-hidden="true">
+						        <a href="#quienesSomos">
+						            <i class="mbri-down mbr-iconfont"></i>
+						        </a>
+						    </div>
 						</section>
 					</section>
 
 				<!-- Two -->
-					<section id="two" class="wrapper style3 fade-up">
-						<div class="inner">
-							<h2>What we do</h2>
-							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
-							<div class="features">
+					<!-- copiar desde aqui ---------------------------------------------------------------------------------- -->
+
+				<!-- quienes somos -->
+					<section id="quienesSomos" class="wrapper style3 fade-up">
+						<div class="inner azul">
+							<h2 class="titulo">Quienes Somos</h2>
+							<p class="parrafo">Somos una empresa colombiana, que se encarga de personalizar todo tipo de accesorios y prendas, que permitan satisfacer las necesidades de cada uno de nuestros clientes, de tal forma que podamos brindar alegria a traves de nuestras mejoras, ayudando a cada uno de nuestros clientes, asesorandolos de tal forma que puedan hacer realidad cada idea que tengan, con respecto a la personalización de sus accesorios.</p>
+							<div class="cuadro">
 								<section>
-									<span class="icon major fa-code"></span>
-									<h3>Lorem ipsum amet</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon major fa-lock"></span>
-									<h3>Aliquam sed nullam</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon major fa-cog"></span>
-									<h3>Sed erat ullam corper</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon major fa-desktop"></span>
-									<h3>Veroeros quis lorem</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon major fa-chain"></span>
-									<h3>Urna quis bibendum</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon major fa-diamond"></span>
-									<h3>Aliquam urna dapibus</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+									<span class="icon major fa-ravelry"></span>
+									<h3 class="titulo">Nuestro Objetivo</h3>
+									<p class="parrafo">Como objetivo, en Your Style queremos complacer el gusto de los clientes con accesorios y prendas innovadoras de buena calidad,  que satisfagan las expectativas y que ello contribuya al diseño del desarrollo y producción de un plan estratégico de la empresa.</p>
 								</section>
 							</div>
-							<ul class="actions">
-								<li><a href="generic.html" class="button">Learn more</a></li>
-							</ul>
+
+							<div class="features">
+								<section>
+									<span class="icon major fa-hand-paper-o"></span>
+									<h3 class="titulo">Nos Comprometemos</h3>
+									<ul style="font-size: 14px">
+										<li class="parrafo">Innovar cada accesorio y prenda teniendo en cuenta la opinión y el gusto de cada uno de los clientes</li>
+										<li class="parrafo">Satisfacer a los clientes con los elementos que se utilizaran en la elaboración de cada accesorio y prenda en los cuales se tendrá en cuenta su estilo, material.</li>
+									</ul>
+								</section>
+								<section>
+									<span class="icon major fa-eye"></span>
+									<h3 class="titulo">Nuestra Visión</h3>
+									<ul style="font-size: 14px">
+										<li class="parrafo">Expandirnos y aumentar las ventas por medio de internet a todas partes del mundo y lograr ser reconocidos</li>
+										<li class="parrafo">Seguir aprendiendo nuevas formas de llevar a cabo nuestra misión, para de esta manera poder satisfacer cada gusto y necesidad que tengan nuestros clientes.</li>
+									</ul>
+								</section>
+							</div>
+							<a href="#nuestrosProductos" class=" boton scrolly"><span class="text-boton">Nuestros Productos</span></a>
 						</div>
 					</section>
 
-				<!-- tres -->
-					<section id="three" class="wrapper style2 spotlights">
+				<!-- nuestros productos -->
+					<section id="nuestrosProductos" class="wrapper style2 spotlights">
 						<section>
-							<a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" /></a>
+							<a href="#" class="image"><img src="images/anillo.jpg" id="anillo" alt="" data-position="center center" /></a>
 							<div class="content">
 								<div class="inner">
-									<h2>Sed ipsum dolor</h2>
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
+									<h2 class="ti">Anillos</h2>
+									<p class="parrafo">La empresa personalizara anillos en acero los cuales llevaran grabado lo que el cliente desee como: (fechas, nombres, iniciales y frases) tendrán un precio cómodo para los clientes.</p>
 									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
+										<a href="#vender" onclick="clickaction(this)" id="anillo" class="boton" rel="modal:open"><span class="text-boton">Comprar</span></a>
 									</ul>
 								</div>
 							</div>
 						</section>
 						<section>
-							<a href="#" class="image"><img src="images/pic02.jpg" alt="" data-position="top center" /></a>
+							<a href="#" class="image"><img src="images/pulsera.jpg" alt="" data-position="top center" /></a>
 							<div class="content">
 								<div class="inner">
-									<h2>Feugiat consequat</h2>
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
+									<h2 class="ti">Pulseras</h2>
+									<p class="parrafo">La empresa se encargara de elaborar y personalizar pulseras con materiales artesanales o hechos con hilos, fibras textiles, metales, silicona y de gomas.</p>
+									<a href="#vender" onclick="clickaction(this)" id="pulsera" class="boton" rel=modal:open><span class="text-boton">Comprar</span></a>
 								</div>
 							</div>
 						</section>
 						<section>
-							<a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%" /></a>
+							<a href="#" class="image"><img src="images/collar.jpg" alt="" data-position="25% 25%" /></a>
 							<div class="content">
 								<div class="inner">
-									<h2>Ultricies aliquam</h2>
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
+									<h2 class="ti">Collares</h2>
+									<p class="parrafo">Se ofrecerá collares tipo artesanal hechos con hilos, argollas, broches, piedras, perlas y detalles metálicos. Cada uno de estos será personalizado y elaborado con  los materiales y diseños los cuales serán escogidos por nuestro cliente.</p>
+									<a href="#vender" onclick="clickaction(this)" id="collar" class="boton" rel=modal:open><span class="text-boton">Comprar</span></a>
 								</div>
 							</div>
 						</section>
+						<section>
+							<a href="#" class="image"><img src="images/camisas.jpg" alt="" data-position="25% 25%" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2 class="ti">Camisas y Gorras</h2>
+									<p class="parrafo">Camisas y gorras estampadas de todo tipo, el precio variará según la complejidad del estampado que se requiera y el tipo de tela escogido por el cliente, también llevaran detalles como lentejuelas, piedrillas, tela de terciopelo, plumas, esto dará un aspecto de alto relieve pero cada uno de estos detalles serán escogidos por los clientes teniendo en cuenta sus gustos y exigencias.</p>
+									<a href="#vender" onclick="clickaction(this)" id="camisas" class="boton" rel=modal:open><span class="text-boton">Comprar</span></a>
+								</div>
+							</div>
+						</section>
+						<section>
+							<a href="#" class="image"><img src="images/tulas.jpg" alt="" data-position="25% 25%" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2 class="ti">Tulas</h2>
+									<p class="parrafo">Las tulas serán personalizadas con muchos detalles escogidos por los clientes, están serán estampadas con diferentes figuras, animales o cosas también se le añadirán materiales como perlas, lentejuelas, brillantinas, telas de diferente tipos, cada uno de estos elementos se pondrán en la tula si el cliente así lo desea.</p>
+									<a href="#vender" onclick="clickaction(this)" id="tulas" class="boton" rel=modal:open><span class="text-boton">Comprar</span></a>
+								</div>
+							</div>
+						</section>
+
+						<!--  -- --- ------------------------- modal vender --------------------------------------------------- -->
+						<div id="vender" class="modal">
+							<h4 class="ti">Comprar</h4>
+							<div style="float: left; width: 160px">
+								<span id="tituloModal" style="color: Black;"></span>
+								<br>
+								<p id="descripcionModal" style="width: 100%; color: black; font-size: 12px; text-align: justify-all;"></p>
+								<span style="width: 100%; color: black; font-size: 14px; font-weight: bold;">Cantidad</span>
+								<table style="width: 100%;">
+									<tr>
+										<button class="boton btn-form" type="button" id="menos" onclick="javascript: contadormenos('cantidad1')"><i class="fa fa-minus"></i></button>
+										<input id="cantidad1" type="text" class="cajita" value="1">
+										<button class="boton btn-form" type="button" id="mas" onclick="javascript: contadormas('cantidad1')"><i class="fa fa-plus"></i></button>
+									</tr>
+								</table>
+							</div>
+							<img id="imagenModal" src="images/anillo.jpg" style="width: 250px; height: auto; float: right;">
+							<p></p>
+						</div>
 					</section>
+
+
+
+<!-- copiar hasta aqui ---------------------------------------------------------------------------------------------------- -->
+
 
 				<!-- cuatro -->
 					<section id="four" class="wrapper style1 fade-up">
 						<div class="inner">
-							<h2>Get in touch</h2>
-							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
-							<div class="split style1">
-								<section>
-									<form method="post" action="#">
+							<div class=" style1">
+								 <form>
+										<h2 class="til">Información de Contacto</h2>
 										<div class="fields">
 											<div class="field half">
-												<label for="name">Name</label>
+												<label for="name">Nombre</label>
 												<input type="text" name="name" id="name" />
 											</div>
 											<div class="field half">
-												<label for="email">Email</label>
+												<label for="email">Correo</label>
 												<input type="text" name="email" id="email" />
 											</div>
 											<div class="field">
-												<label for="message">Message</label>
+												<label for="message">Mensaje</label>
 												<textarea name="message" id="message" rows="5"></textarea>
 											</div>
 										</div>
 										<ul class="actions">
-											<li><a href="" class="button submit">Send Message</a></li>
+											<li><a  class="button ">Enviar Mensaje</a></li>
 										</ul>
-									</form>
-								</section>
-								<section>
-									<ul class="contact">
-										<li>
-											<h3>Address</h3>
-											<span>12345 Somewhere Road #654<br />
-											Nashville, TN 00000-0000<br />
-											USA</span>
-										</li>
-										<li>
-											<h3>Email</h3>
-											<a href="#">user@untitled.tld</a>
-										</li>
-										<li>
-											<h3>Phone</h3>
-											<span>(000) 000-0000</span>
-										</li>
-										<li>
-											<h3>Social</h3>
-											<ul class="icons">
-												<li><a href="#" class="fa-twitter"><span class="label">Twitter</span></a></li>
-												<li><a href="#" class="fa-facebook"><span class="label">Facebook</span></a></li>
-												<li><a href="#" class="fa-github"><span class="label">GitHub</span></a></li>
-												<li><a href="#" class="fa-instagram"><span class="label">Instagram</span></a></li>
-												<li><a href="#" class="fa-linkedin"><span class="label">LinkedIn</span></a></li>
-											</ul>
-										</li>
-									</ul>
-								</section>
+								</form>	
 							</div>
 						</div>
 					</section>
 
 			</div>
 
-		<!-- Footer -->
-			<footer id="footer" class="wrapper style1-alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
+		<footer id="footer" class="wrapper style1-alt">
+			<div class="inner">
+				<ul class="menu">
+					<li>&copy; Todos los derechos reservados</li>
+			</div>
+	   </footer>
+
+
+
+		<!-- copiar desde aqui ----------------------------------------------------------------------- -->
+
+		<script type="text/javascript">
+			$(function() {
+				$('a[href="#vender"]').click(function(event) {
+			      event.preventDefault();
+			      $(this).modal({
+			        fadeDuration: 250
+			      });
+			    });
+		    });
+		</script>
+
+<!-- copiar hasta aqui ---------------------------------------------------------------------------- -->
+
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>

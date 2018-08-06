@@ -1,0 +1,65 @@
+@import url(https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i);
+
+@font-face {
+  font-family: 'MobiriseIcons';
+  src:  url('mobirise-icons.eot?spat4u');
+  src:  url('mobirise-icons.eot?spat4u#iefix') format('embedded-opentype'),
+    url('mobirise-icons.ttf?spat4u') format('truetype'),
+    url('mobirise-icons.woff?spat4u') format('woff'),
+    url('mobirise-icons.svg?spat4u#MobiriseIcons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-style: normal;
+  line-height: 1.5;
+}
+.cid-qTkA127IK8 {
+  background-image: url("images/pic100.gif");
+}
+.display-2 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 3rem;
+}
+.mbr-overlay {
+  background-color: #000;
+  bottom: 0;
+  left: 0;
+  opacity: .5;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.mbr-fullscreen {
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  align-items: center;
+  -webkit-align-items: center;
+  min-height: 100vh;
+  padding-top: 3rem;
+  padding-bottom: 3rem; }
+
+  .mbr-bold {
+  font-weight: 700; }
+
+
+.mbr-z-index20 {
+  z-index: 20; }
+
+/*! Base colors */
+.mbr-white {
+  color: #ffffff; }
+  section {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.mbri-down:before {
+  content: "\e925";
+}
